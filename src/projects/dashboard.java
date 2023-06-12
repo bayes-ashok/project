@@ -210,9 +210,7 @@ public class dashboard extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
-  
-  
+
    
     private void feature6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature6ActionPerformed
         // TODO add your handling code here:
@@ -263,7 +261,6 @@ public class dashboard extends javax.swing.JFrame {
 //        new manageRoom().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature1ActionPerformed
 
-    
     private void feature2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature2ActionPerformed
         // TODO add your handling code here:
         feature2.setForeground(Color.black);
@@ -275,7 +272,6 @@ public class dashboard extends javax.swing.JFrame {
         feature6.setBackground(new Color(217,217,217));
 //        new registration().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature2ActionPerformed
-
     
     private void feature3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature3ActionPerformed
         // TODO add your handling code here:
@@ -289,7 +285,6 @@ public class dashboard extends javax.swing.JFrame {
 //       new updateRegistration().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature3ActionPerformed
 
-    
     private void feature4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature4ActionPerformed
         // TODO add your handling code here:
         feature4.setForeground(Color.black);
@@ -303,7 +298,6 @@ public class dashboard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_feature4ActionPerformed
 
-    
     private void feature5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature5ActionPerformed
         // TODO add your handling code here:
         feature5.setForeground(Color.black);
@@ -381,5 +375,3 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField userName;
     // End of variables declaration//GEN-END:variables
 }
-
-
