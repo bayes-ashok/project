@@ -263,6 +263,7 @@ public class dashboard extends javax.swing.JFrame {
 //        new manageRoom().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature1ActionPerformed
 
+    
     private void feature2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature2ActionPerformed
         // TODO add your handling code here:
         feature2.setForeground(Color.black);
@@ -275,6 +276,7 @@ public class dashboard extends javax.swing.JFrame {
 //        new registration().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature2ActionPerformed
 
+    
     private void feature3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature3ActionPerformed
         // TODO add your handling code here:
         feature3.setForeground(Color.black);
@@ -287,6 +289,7 @@ public class dashboard extends javax.swing.JFrame {
 //       new updateRegistration().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature3ActionPerformed
 
+    
     private void feature4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature4ActionPerformed
         // TODO add your handling code here:
         feature4.setForeground(Color.black);
@@ -300,6 +303,7 @@ public class dashboard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_feature4ActionPerformed
 
+    
     private void feature5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature5ActionPerformed
         // TODO add your handling code here:
         feature5.setForeground(Color.black);
@@ -320,6 +324,7 @@ public class dashboard extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -376,3 +381,5 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField userName;
     // End of variables declaration//GEN-END:variables
 }
+
+
