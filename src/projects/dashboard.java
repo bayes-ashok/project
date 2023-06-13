@@ -210,9 +210,7 @@ public class dashboard extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
-  
-  
+
    
     private void feature6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature6ActionPerformed
         // TODO add your handling code here:
@@ -274,7 +272,7 @@ public class dashboard extends javax.swing.JFrame {
         feature6.setBackground(new Color(217,217,217));
 //        new registration().setVisible(true); make file with this name undecorated
     }//GEN-LAST:event_feature2ActionPerformed
-
+    
     private void feature3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature3ActionPerformed
         // TODO add your handling code here:
         feature3.setForeground(Color.black);
@@ -320,6 +318,7 @@ public class dashboard extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
