@@ -216,7 +216,7 @@ public class dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         feature6.setForeground(Color.black);
         feature6.setBackground(new Color(0,255,255));
-        new statusBar().setVisible(true);
+//        new statusBar().setVisible(true);
         feature1.setBackground(new Color(217,217,217));
         feature2.setBackground(new Color(217,217,217));
         feature3.setBackground(new Color(217,217,217));
