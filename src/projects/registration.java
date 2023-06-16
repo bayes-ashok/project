@@ -249,37 +249,7 @@ public class registration extends javax.swing.JFrame {
         String address=addressField.getText();
         String collegeName=collegeField.getText();
         String roomNum=(String)roomNumber.getSelectedItem();
-        String status="living";
-        try{
-            Connection connect = DbConnection.connect();
-            PreparedStatement statement = connect.prepareStatement("INSERT INTO studentDetails (name, number, email, fatherName, motherName, address, collegeName, roomNumber, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-            statement.setString(1, name);
-            statement.setString(2, num);
-            statement.setString(3, email);
-            statement.setString(4, fName);
-            statement.setString(5, mName);
-            statement.setString(6, address);
-            statement.setString(7, collegeName);
-            statement.setString(8, roomNum);
-            statement.setString(9, status);
-            statement.executeUpdate();
-            
-            ResultSet result = statement.getGeneratedKeys();
-            if (result.next()) {
-                int id = result.getInt(1);
-                JOptionPane.showMessageDialog(this, "The student ID is "+id);
-            }
-            
-            PreparedStatement statement2 = connect.prepareStatement("update room set roomStatus='Booked' where roomNumber=?");
-            statement2.setString(1, roomNum);
-            statement2.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Successfully Addedd");
-            set();
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(this,e.getMessage());
-        }
-    }//GEN-LAST:event_submitActionPerformed
+        String status="living";//GEN-LAST:event_submitActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
