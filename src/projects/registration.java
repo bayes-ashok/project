@@ -29,7 +29,30 @@ public class registration extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    
+    private void initComponents() {
+
+        jPanel2 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        nameField = new javax.swing.JTextField();
+        numField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        fNameField = new javax.swing.JTextField();
+        mNameField = new javax.swing.JTextField();
+        addressField = new javax.swing.JTextField();
+        collegeField = new javax.swing.JTextField();
+        roomNumber = new javax.swing.JComboBox<>();
+        submit = new javax.swing.JButton();
+        clear = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(340, 175));
         setUndecorated(true);
