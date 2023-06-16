@@ -270,6 +270,20 @@ public class registration extends javax.swing.JFrame {
         String roomNum=(String)roomNumber.getSelectedItem();
         String status="living";//GEN-LAST:event_submitActionPerformed
 
+        try{
+            Connection connect = DbConnection.connect();
+            PreparedStatement statement = connect.prepareStatement("INSERT INTO studentDetails (name, number, email, fatherName, motherName, address, collegeName, roomNumber, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, name);
+            statement.setString(2, num);
+            statement.setString(3, email);
+            statement.setString(4, fName);
+            statement.setString(5, mName);
+            statement.setString(6, address);
+            statement.setString(7, collegeName);
+            statement.setString(8, roomNum);
+            statement.setString(9, status);
+            statement.executeUpdate();
+
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
         set();
