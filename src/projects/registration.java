@@ -284,7 +284,24 @@ public class registration extends javax.swing.JFrame {
             statement.setString(9, status);
             statement.executeUpdate();
 
-    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+             ResultSet result = statement.getGeneratedKeys();
+            if (result.next()) {
+                int id = result.getInt(1);
+                JOptionPane.showMessageDialog(this, "The student ID is "+id);
+            }
+            
+            PreparedStatement statement2 = connect.prepareStatement("update room set roomStatus='Booked' where roomNumber=?");
+            statement2.setString(1, roomNum);
+            statement2.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Successfully Addedd");
+            set();
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }
+
+     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         // TODO add your handling code here:
         set();
     }//GEN-LAST:event_clearActionPerformed
