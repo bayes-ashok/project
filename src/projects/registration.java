@@ -224,16 +224,7 @@ public class registration extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public  void set(){
-        nameField.setText("");
-        numField.setText("");
-        emailField.setText("");
-        fNameField.setText("");
-        mNameField.setText("");
-        addressField.setText("");
-        collegeField.setText("");
-        roomNumber.removeAllItems();
-    }
+   
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
