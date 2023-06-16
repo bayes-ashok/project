@@ -244,7 +244,15 @@ public class registration extends javax.swing.JFrame {
                 i=1;
                 roomNumber.addItem(result.getString(1));
             }
-            
+            if(i==0){
+                JOptionPane.showMessageDialog(this, "All room booked");
+                set();
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
