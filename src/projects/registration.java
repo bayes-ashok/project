@@ -234,6 +234,17 @@ public class registration extends javax.swing.JFrame {
         collegeField.setText("");
         roomNumber.removeAllItems();
     }
+    public void roomNum(){
+        int i=0;
+        try{
+            Connection connect = DbConnection.connect();
+            Statement statement= connect.createStatement();
+            ResultSet result= statement.executeQuery("select * from room where activationStatus='Activated' and roomStatus='Not Booked'");
+            while(result.next()){
+                i=1;
+                roomNumber.addItem(result.getString(1));
+            }
+            
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
