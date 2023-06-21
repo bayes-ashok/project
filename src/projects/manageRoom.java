@@ -25,12 +25,7 @@ public class manageRoom extends javax.swing.JFrame {
     ButtonGroup group1= new ButtonGroup();
     ButtonGroup group2= new ButtonGroup();
     public manageRoom() {
-        initComponents();
-        initComponents();
-        group1.add(activatedRadioButton);
-        group1.add(deactivatedRadioButton);
-        group2.add(updateActivated);
-        group2.add(updateDeactivated);
+        
         
     }
     
