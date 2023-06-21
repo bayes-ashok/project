@@ -369,6 +369,14 @@ public class manageRoom extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+        String room = updateRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        String activationStatus;
+        if (updateActivated.isSelected()) {
+            activationStatus = updateActivated.getText();
+        } else {
+            activationStatus = updateDeactivated.getText();
+        }
         
         
     }//GEN-LAST:event_searchButtonActionPerformed
