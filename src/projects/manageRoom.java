@@ -26,6 +26,11 @@ public class manageRoom extends javax.swing.JFrame {
     ButtonGroup group2= new ButtonGroup();
     public manageRoom() {
         initComponents();
+        initComponents();
+        group1.add(activatedRadioButton);
+        group1.add(deactivatedRadioButton);
+        group2.add(updateActivated);
+        group2.add(updateDeactivated);
         
     }
     
@@ -383,6 +388,30 @@ public class manageRoom extends javax.swing.JFrame {
 
     private void searchRoomFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchRoomFieldActionPerformed
         // TODO add your handling code here:
+        String room = addRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        String activationStatus;
+        if (activatedRadioButton.isSelected()) {
+            activationStatus = activatedRadioButton.getText();
+        } else {
+            activationStatus = deactivatedRadioButton.getText();
+        }
+        String roomStatus = "Not Booked";
+        try {
+            Connection connect = DbConnection.connect();
+            PreparedStatement statement = connect.prepareStatement("INSERT INTO room VALUES (?, ?, ?)");
+            statement.setInt(1, roomNum);
+            statement.setString(2, activationStatus);
+            statement.setString(3, roomStatus);
+
+            statement.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Room Added successfully");
+
+            addRoomField.setText("");
+            group1.clearSelection();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
         
     }//GEN-LAST:event_searchRoomFieldActionPerformed
     
