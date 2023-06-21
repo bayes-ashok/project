@@ -397,7 +397,16 @@ public class manageRoom extends javax.swing.JFrame {
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
-         
+         String room = updateRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        try {
+            Connection connect = DbConnection.connect();
+            Statement statement = connect.createStatement();
+            statement.executeUpdate("delete from room where roomNumber = "+roomNum);
+            searchRoomField.setText("");
+            JOptionPane.showMessageDialog(this, "Room deleted successfully.");
+            updateRoomField.setText("");
+        }
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void deactivatedRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deactivatedRadioButtonActionPerformed
