@@ -369,6 +369,11 @@ public class manageRoom extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+        
+    }//GEN-LAST:event_searchButtonActionPerformed
+
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
+        // TODO add your handling code here:
         String room = updateRoomField.getText();
         int roomNum = Integer.parseInt(room);
         String activationStatus;
@@ -377,12 +382,16 @@ public class manageRoom extends javax.swing.JFrame {
         } else {
             activationStatus = updateDeactivated.getText();
         }
-        
-        
-    }//GEN-LAST:event_searchButtonActionPerformed
-
-    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            Connection connect = DbConnection.connect();
+            Statement statement = connect.createStatement();
+            statement.executeUpdate("update room set activationStatus='"+activationStatus+"' where roomNumber = "+roomNum);
+            searchRoomField.setText("");
+            JOptionPane.showMessageDialog(this, "Room updated successfully.");
+            updateRoomField.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
         
     }//GEN-LAST:event_updateButtonActionPerformed
 
