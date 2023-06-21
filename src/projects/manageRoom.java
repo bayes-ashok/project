@@ -406,6 +406,8 @@ public class manageRoom extends javax.swing.JFrame {
             searchRoomField.setText("");
             JOptionPane.showMessageDialog(this, "Room deleted successfully.");
             updateRoomField.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_deleteButtonActionPerformed
 
