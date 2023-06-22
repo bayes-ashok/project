@@ -5,7 +5,6 @@
 package projects;
 import java.sql.*;
 import database.DbConnection;
-import static java.awt.Color.black;
 import javax.swing.JOptionPane;
 
 
@@ -26,6 +25,10 @@ public class manageRoom extends javax.swing.JFrame {
     ButtonGroup group2= new ButtonGroup();
     public manageRoom() {
         initComponents();
+        group1.add(activatedRadioButton);
+        group1.add(deactivatedRadioButton);
+        group2.add(updateActivated);
+        group2.add(updateDeactivated);
         
     }
     
@@ -340,17 +343,67 @@ public class manageRoom extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
-        
-        
+        String room = searchRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        try {
+            Connection connect = DbConnection.connect();
+            PreparedStatement statement = connect.prepareStatement("SELECT * FROM room WHERE roomNumber = ?");
+            statement.setInt(1, roomNum);
+            ResultSet result = statement.executeQuery();
+
+            if (result.next()) {
+                updateRoomField.setText(result.getString(1));
+                String activationStatus = result.getString(2);
+                if (activationStatus.equals("Activated")) {
+                    updateActivated.setSelected(true);
+                } else if (activationStatus.equals("Deactivated")) {
+                    updateDeactivated.setSelected(true);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Room doesn't exist.");
+            }
+            searchRoomField.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-        
+        String room = updateRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        String activationStatus;
+        if (updateActivated.isSelected()) {
+            activationStatus = updateActivated.getText();
+        } else {
+            activationStatus = updateDeactivated.getText();
+        }
+        try {
+            Connection connect = DbConnection.connect();
+            Statement statement = connect.createStatement();
+            statement.executeUpdate("update room set activationStatus='"+activationStatus+"' where roomNumber = "+roomNum);
+            searchRoomField.setText("");
+            JOptionPane.showMessageDialog(this, "Room updated successfully.");
+            updateRoomField.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }   
     }//GEN-LAST:event_updateButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
+        String room = updateRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        try {
+            Connection connect = DbConnection.connect();
+            Statement statement = connect.createStatement();
+            statement.executeUpdate("delete from room where roomNumber = "+roomNum);
+            searchRoomField.setText("");
+            JOptionPane.showMessageDialog(this, "Room deleted successfully.");
+            updateRoomField.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }   
          
     }//GEN-LAST:event_deleteButtonActionPerformed
 
@@ -369,16 +422,35 @@ public class manageRoom extends javax.swing.JFrame {
     private void allRoomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allRoomButtonActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        // new allRooms().setVisible(true); view all room
+        new allRooms().setVisible(true); //view all room
     }//GEN-LAST:event_allRoomButtonActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
-        
-        
-        
+        String room = addRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        String activationStatus;
+        if (activatedRadioButton.isSelected()) {
+            activationStatus = activatedRadioButton.getText();
+        } else {
+            activationStatus = deactivatedRadioButton.getText();
+        }
+        String roomStatus = "Not Booked";
+        try {
+            Connection connect = DbConnection.connect();
+            PreparedStatement statement = connect.prepareStatement("INSERT INTO room VALUES (?, ?, ?)");
+            statement.setInt(1, roomNum);
+            statement.setString(2, activationStatus);
+            statement.setString(3, roomStatus);
 
-        
+            statement.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Room Added successfully");
+
+            addRoomField.setText("");
+            group1.clearSelection();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void searchRoomFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchRoomFieldActionPerformed
