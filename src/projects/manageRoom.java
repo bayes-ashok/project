@@ -346,6 +346,29 @@ public class manageRoom extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+                String room = searchRoomField.getText();
+        int roomNum = Integer.parseInt(room);
+        try {
+            Connection connect = DbConnection.connect();
+            PreparedStatement statement = connect.prepareStatement("SELECT * FROM room WHERE roomNumber = ?");
+            statement.setInt(1, roomNum);
+            ResultSet result = statement.executeQuery();
+
+            if (result.next()) {
+                updateRoomField.setText(result.getString(1));
+                String activationStatus = result.getString(2);
+                if (activationStatus.equals("Activated")) {
+                    updateActivated.setSelected(true);
+                } else if (activationStatus.equals("Deactivated")) {
+                    updateDeactivated.setSelected(true);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Room doesn't exist.");
+            }
+            searchRoomField.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
         
     }//GEN-LAST:event_searchButtonActionPerformed
 
