@@ -426,7 +426,7 @@ public class manageRoom extends javax.swing.JFrame {
     private void allRoomButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allRoomButtonActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        //new allRooms().setVisible(true); //view all room
+        new allRooms().setVisible(true); //view all room
     }//GEN-LAST:event_allRoomButtonActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
