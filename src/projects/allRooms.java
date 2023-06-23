@@ -27,12 +27,13 @@ public class allRooms extends javax.swing.JFrame {
             Statement statement= connect.createStatement();
             ResultSet result= statement.executeQuery("select * from room");
             while(result.next()){
-               
+                a.addRow(new Object[]{result.getString(1),result.getString(2),result.getString(3)});
+
             }
 
         }
         catch(Exception e){
-            
+             JOptionPane.showMessageDialog(null, e.getMessage());
             
         }
         
