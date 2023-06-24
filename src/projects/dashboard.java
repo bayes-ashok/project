@@ -258,7 +258,7 @@ public class dashboard extends javax.swing.JFrame {
         feature4.setBackground(new Color(217,217,217));
         feature5.setBackground(new Color(217,217,217));
         feature6.setBackground(new Color(217,217,217));
-//        new manageRoom().setVisible(true); make file with this name undecorated
+        new manageRoom().setVisible(true);
     }//GEN-LAST:event_feature1ActionPerformed
 
     private void feature2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feature2ActionPerformed
