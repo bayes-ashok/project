@@ -65,6 +65,12 @@ public class manageRoom extends javax.swing.JFrame {
         updateDeactivated = new javax.swing.JRadioButton();
         allRoomButton = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(51, 0, 204));
+        setLocation(new java.awt.Point(275, 180));
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
