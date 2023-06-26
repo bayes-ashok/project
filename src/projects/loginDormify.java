@@ -18,7 +18,7 @@ public class loginDormify extends javax.swing.JFrame {
      */
     private static String enteredEmail;
     public loginDormify() {
-        initComponents()
+        initComponents();
     }
 
     /**
