@@ -15,7 +15,7 @@ import model.takeAttendanceModel;
  * @author LENOVO
  */
 public class takeAttendanceDAO {
-    private takeAttendanceModel model;
+    private final takeAttendanceModel model;
     public takeAttendanceDAO(takeAttendanceModel model) {
         this.model=model;
     }
