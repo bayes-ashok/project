@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public final class livingStudentsView extends javax.swing.JFrame {
 
     /**
-     * Creates new form allStudents
+     * Create new form allStudents
      */
     public livingStudentsView() {
         initComponents();

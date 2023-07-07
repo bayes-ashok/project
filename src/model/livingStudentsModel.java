@@ -6,7 +6,6 @@ package model;
 
 import javax.swing.table.DefaultTableModel;
 
-
 public class livingStudentsModel {
     private DefaultTableModel tableName;
     public livingStudentsModel(DefaultTableModel tableName) {

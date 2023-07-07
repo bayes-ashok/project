@@ -17,7 +17,7 @@ import javax.swing.ButtonGroup;
 public class manageRoomView extends javax.swing.JFrame {
 
     /**
-     * Creates new form manageRoomView
+     * Create new form manageRoomView
      */
     ButtonGroup group1= new ButtonGroup();
     ButtonGroup group2= new ButtonGroup();

@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/rabins_khanal/Desktop/project/src/dao/livingStudentsDAO.java</file>
-            <file>file:/Users/rabins_khanal/Desktop/project/src/model/livingStudentsModel.java</file>
-            <file>file:/Users/rabins_khanal/Desktop/project/src/controller/livingStudentsController.java</file>
-            <file>file:/Users/rabins_khanal/Desktop/project/src/view/livingStudentsView.java</file>
+            <file>file:/Users/rabins_khanal/Desktop/project/src/model/manageRoomModel.java</file>
+            <file>file:/Users/rabins_khanal/Desktop/project/src/database/DbConnection.java</file>
+            <file>file:/Users/rabins_khanal/Desktop/project/src/controller/manageRoomController.java</file>
+            <file>file:/Users/rabins_khanal/Desktop/project/src/dao/manageRoomDAO.java</file>
+            <file>file:/Users/rabins_khanal/Desktop/project/src/view/manageRoomView.java</file>
         </group>
     </open-files>
 </project-private>
