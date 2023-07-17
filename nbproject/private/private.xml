@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/suman/OneDrive/Desktop/image/project/src/database/DbConnection.java</file>
-            <file>file:/C:/Users/suman/OneDrive/Desktop/image/project/src/model/registrationModel.java</file>
-            <file>file:/C:/Users/suman/OneDrive/Desktop/image/project/src/controller/registrationController.java</file>
-            <file>file:/C:/Users/suman/OneDrive/Desktop/image/project/src/view/registrationView.java</file>
-            <file>file:/C:/Users/suman/OneDrive/Desktop/image/project/src/dao/registrationDAO.java</file>
+            <file>file:/C:/Users/suman/OneDrive/Documents/GitHub/project/src/model/feeModel.java</file>
+            <file>file:/C:/Users/suman/OneDrive/Documents/GitHub/project/src/controller/feeController.java</file>
+            <file>file:/C:/Users/suman/OneDrive/Documents/GitHub/project/src/dao/feeDAO.java</file>
+            <file>file:/C:/Users/suman/OneDrive/Documents/GitHub/project/src/view/fee.java</file>
         </group>
     </open-files>
 </project-private>
