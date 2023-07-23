@@ -11,6 +11,7 @@ import controller.updateRegistrationController;
 import model.updateRegistrationModel;
 import static model.updateRegistrationModel.*;
 import dao.updateRegistrationDAO;
+import org.junit.Assert;
 
 
 /**
@@ -306,6 +307,21 @@ public class updateRegistrationView extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+        
+//    Testing 
+//
+//    Assert.assertEquals(false,searchField.getText().length()==0);
+//    Assert.assertEquals(false,nameField.getText().length()==0);
+//    Assert.assertEquals(false,numField.getText().length()==0);
+//    Assert.assertEquals(false,emailField.getText().length()==0);
+//    Assert.assertEquals(false,fNameField.getText().length()==0);
+//    Assert.assertEquals(false,mNameField.getText().length()==0);
+//    Assert.assertEquals(false,addressField.getText().length()==0);
+//    Assert.assertEquals(false,collegeField.getText().length()==0);
+//    Assert.assertEquals(false,roomField.getText().length()==0);
+
+//
+        
         String id= searchField.getText();
         updateRegistrationController rcontrol = new updateRegistrationController(id,this);
         if(rcontrol.search()){
@@ -334,6 +350,20 @@ public class updateRegistrationView extends javax.swing.JFrame {
     
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         // TODO add your handling code here:
+        
+//        Testing
+
+//    Assert.assertEquals(false,searchField.getText().length()==0);        
+//    Assert.assertEquals(false,nameField.getText().length()==0);
+//    Assert.assertEquals(false,numField.getText().length()==0);
+//    Assert.assertEquals(false,emailField.getText().length()==0);
+//    Assert.assertEquals(false,fNameField.getText().length()==0);
+//    Assert.assertEquals(false,mNameField.getText().length()==0);
+//    Assert.assertEquals(false,addressField.getText().length()==0);
+//    Assert.assertEquals(false,collegeField.getText().length()==0);
+//    Assert.assertEquals(false,roomField.getText().length()==0);
+        
+        
         updateRegistrationController rcontrol = new updateRegistrationController(getValue(),this);
         if(rcontrol.update()){
             JOptionPane.showMessageDialog(this, "Updated Successfully");
@@ -358,6 +388,17 @@ public class updateRegistrationView extends javax.swing.JFrame {
     }
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        
+//        Testing
+
+//    Assert.assertEquals(false,nameField.getText().length()==0);
+//    Assert.assertEquals(false,numField.getText().length()==0);
+//    Assert.assertEquals(false,emailField.getText().length()==0);
+//    Assert.assertEquals(false,fNameField.getText().length()==0);
+//    Assert.assertEquals(false,mNameField.getText().length()==0);
+//    Assert.assertEquals(false,addressField.getText().length()==0);
+//    Assert.assertEquals(false,collegeField.getText().length()==0);
+//    Assert.assertEquals(false,roomField.getText().length()==0);
         updateRegistrationController rcontrol = new updateRegistrationController(getValue(),this);
         if(rcontrol.delete()){
             JOptionPane.showMessageDialog(this, "Deleted Successfully");

@@ -259,6 +259,18 @@ public class registrationView extends javax.swing.JFrame {
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+//  Testing
+
+
+//    Assert.assertEquals(false,nameField.getText().length()==0);
+//    Assert.assertEquals(false,numField.getText().length()==0);
+//    Assert.assertEquals(false,emailField.getText().length()==0);
+//    Assert.assertEquals(false,fNameField.getText().length()==0);
+//    Assert.assertEquals(false,mNameField.getText().length()==0);
+//    Assert.assertEquals(false,addressField.getText().length()==0);
+//    Assert.assertEquals(false,collegeField.getText().length()==0);
+//    Assert.assertEquals(false,roomField.getText().length()==0);
+        
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

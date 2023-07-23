@@ -8,6 +8,7 @@ import model.feeModel;
 import static model.feeModel.*;
 import controller.feeController;
 import javax.swing.table.DefaultTableModel;
+import org.junit.Assert;
 
 
 
@@ -192,6 +193,17 @@ public final class fee extends javax.swing.JFrame {
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         // TODO add your handling code here:
+       
+//     Testing        
+        
+//    Assert.assertEquals(false,id.getText().length()==0);
+//    Assert.assertEquals(false,name.getText().length()==0);
+//    Assert.assertEquals(false,num.getText().length()==0);
+//    Assert.assertEquals(false,room.getText().length()==0);
+//    Assert.assertEquals(false,month.getText().length()==0);
+//    Assert.assertEquals(false,amount.getText().length()==0);
+//  
+//    
         feeController control=new feeController(getVal(),this);
         if(control.search()){
             name.setText(fgetName1());
@@ -214,6 +226,15 @@ public final class fee extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        
+//        Testing
+        
+//    Assert.assertEquals(false,name.getText().length()==0);
+//    Assert.assertEquals(false,num.getText().length()==0);
+//    Assert.assertEquals(false,room.getText().length()==0);
+//    Assert.assertEquals(false,month.getText().length()==0);
+//    Assert.assertEquals(false,amount.getText().length()==0);
+        
         feeController control=new feeController(getVal(),this);
         if(control.add()){
             id.setText("");
