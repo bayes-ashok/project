@@ -9,8 +9,7 @@ package view;
 import javax.swing.JOptionPane;
 import controller.loginController;
 import model.loginModel;
-
-
+import org.junit.Assert;
 
 public class loginView extends javax.swing.JFrame {
     /**
@@ -74,6 +73,12 @@ public class loginView extends javax.swing.JFrame {
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
+            }
+        });
+
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFieldActionPerformed(evt);
             }
         });
 
@@ -181,6 +186,10 @@ public class loginView extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+        //Testing
+//        Assert.assertEquals(false,emailField1.getText().length()==0);
+//        Assert.assertEquals(false,passwordField.getText().length()==0);
+        
         loginController rcontrol= new loginController(getuser(),this);
         if(rcontrol.login()){
             enteredEmail = emailField1.getText();
@@ -217,6 +226,10 @@ public class loginView extends javax.swing.JFrame {
         setVisible(false);
         new forgetPasswordView().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldActionPerformed
 
     /**
      * @param args the command line arguments

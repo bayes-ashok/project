@@ -16,10 +16,7 @@ import javax.swing.JOptionPane;
 import static model.feeModel.*;
 
 
-/**
- *
- * @author suman
- */
+
 public class Receipt extends javax.swing.JFrame {
 
     /**
