@@ -11,6 +11,8 @@ import java.util.regex.Matcher;
 import model.SignUpModel;
 import static dao.SignUpDAO.isEmailTaken;
 import controller.signUpController;
+import org.junit.Assert;
+
 
 public class SignUpView extends javax.swing.JFrame {
 
@@ -50,8 +52,8 @@ public class SignUpView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         securityQuestion1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         securityQuestion2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
@@ -246,7 +248,7 @@ public class SignUpView extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
+                        .addGap(147, 147, 147)
                         .addComponent(jLabel8)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
@@ -263,6 +265,17 @@ public class SignUpView extends javax.swing.JFrame {
     
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         // TODO add your handling code here:
+        
+        //Testing
+        
+//        Assert.assertEquals(false,fNameField.getText().length()==0);
+//        Assert.assertEquals(false,lNameField.getText().length()==0);
+//        Assert.assertEquals(false,numberField.getText().length()==0);
+//        Assert.assertEquals(false,emailField.getText().length()==0);
+//        Assert.assertEquals(false,passwordField.getText().length()==0);
+//        Assert.assertEquals(false,confirmPasswordField.getText().length()==0);
+//        Assert.assertEquals(false,securityQuestion1.getText().length()==0);
+//        Assert.assertEquals(false,securityQuestion2.getText().length()==0);
         signUpController rcontrol= new signUpController(getuser(),this);
         if(rcontrol.registeruser()){
             JOptionPane.showMessageDialog(this, "User data inserted");

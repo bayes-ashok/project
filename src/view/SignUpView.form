@@ -63,7 +63,7 @@
                           <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -343,6 +343,8 @@
             </Component>
             <Component class="javax.swing.JTextField" name="securityQuestion1">
             </Component>
+            <Component class="javax.swing.JTextField" name="securityQuestion2">
+            </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -353,8 +355,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="What is your favourite movie? "/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="securityQuestion2">
             </Component>
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
