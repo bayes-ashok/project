@@ -10,10 +10,7 @@ import java.sql.*;
 import database.DbConnection;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author LENOVO
- */
+
 public class registrationView extends javax.swing.JFrame {
 
     /**

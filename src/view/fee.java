@@ -12,10 +12,7 @@ import org.junit.Assert;
 
 
 
-/**
- *
- * @author suman
- */
+
 public final class fee extends javax.swing.JFrame {
 
     /**

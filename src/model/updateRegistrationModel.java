@@ -4,10 +4,6 @@
  */
 package model;
 
-/**
- *
- * @author LENOVO
- */
 
 
 public class updateRegistrationModel {

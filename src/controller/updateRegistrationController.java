@@ -8,10 +8,7 @@ import model.updateRegistrationModel;
 import view.updateRegistrationView;
 import dao.updateRegistrationDAO;
 
-/**
- *
- * @author LENOVO
- */
+
 public class updateRegistrationController {
     private String id;
     private updateRegistrationModel model;

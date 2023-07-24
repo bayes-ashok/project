@@ -14,10 +14,7 @@ import dao.updateRegistrationDAO;
 import org.junit.Assert;
 
 
-/**
- *
- * @author LENOVO
- */
+
 public class updateRegistrationView extends javax.swing.JFrame {
 
     /**

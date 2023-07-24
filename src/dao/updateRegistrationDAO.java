@@ -11,10 +11,7 @@ import model.updateRegistrationModel;
 import static model.updateRegistrationModel.*;
 
 
-/**
- *
- * @author LENOVO
- */
+
 public class updateRegistrationDAO {
     private String id;
     private updateRegistrationModel model;
