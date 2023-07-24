@@ -12,7 +12,7 @@ import controller.manageRoomController;
 
 import javax.swing.ButtonGroup;
 
-
+import org.junit.Assert;
 
 public class manageRoomView extends javax.swing.JFrame {
 
@@ -341,6 +341,9 @@ public class manageRoomView extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+        //Testing:
+        //Assert.assertEquals(false,searchRoomField.getText().length()==0);
+        
         String room = searchRoomField.getText();
         int roomNumSearch = Integer.parseInt(room);
         manageRoomController rcontrol = new manageRoomController(getValue(), this);
@@ -375,6 +378,8 @@ public class manageRoomView extends javax.swing.JFrame {
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
+        //Testing:
+        //Assert.assertEquals(false,updateRoomField.getText().length()==0);
         manageRoomController rcontrol=new manageRoomController(getValue(),this);
         if(rcontrol.updateRoom()){
             searchRoomField.setText("");
@@ -386,6 +391,9 @@ public class manageRoomView extends javax.swing.JFrame {
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
+        //Testing:
+        //Assert.assertEquals(false,updateRoomField.getText().length()==0);
+        
         manageRoomController rcontrol=new manageRoomController(getValue(),this);
         if(rcontrol.deleteRoom()){
             searchRoomField.setText("");
@@ -415,6 +423,8 @@ public class manageRoomView extends javax.swing.JFrame {
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
+        //Testing:
+        //Assert.assertEquals(false,addRoomField.getText().length()==0);
         manageRoomController rcontrol=new manageRoomController(getValue(),this);
         if(rcontrol.addRoom()){
             JOptionPane.showMessageDialog(this, "Room Added successfully");
