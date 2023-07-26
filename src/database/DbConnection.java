@@ -5,7 +5,7 @@ public class DbConnection{
     public static Connection connect(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/dormify","root","ashok_4444");
+            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/Dormify","root","ashok_4444");
             return connection;
         }
         catch(Exception e){
