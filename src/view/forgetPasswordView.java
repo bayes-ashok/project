@@ -7,6 +7,7 @@ package view;
 import javax.swing.JOptionPane;
 import controller.forgetPasswordController;
 import model.forgetPasswordModel;
+import org.junit.Assert;
 
 /**
  *
@@ -254,6 +255,8 @@ public class forgetPasswordView extends javax.swing.JFrame {
     
     private void confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmActionPerformed
         // TODO add your handling code here:
+//        Assert.assertEquals("Security question 1 is empty",false,sec1.getText().length()==0);
+//        Assert.assertEquals("Security question 2 is empty",false,sec2.getText().length()==0);
         forgetPasswordController rcontrol2=new forgetPasswordController(getValue(),this);
         if(rcontrol2.checkSecurityQuestion()){
             JOptionPane.showMessageDialog(this, "Add new password");
@@ -266,6 +269,7 @@ public class forgetPasswordView extends javax.swing.JFrame {
    
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+        //Assert.assertEquals("Email field is empty",false,emailField.getText().length()==0);  
         forgetPasswordController rcontrol1=new forgetPasswordController(getValue(),this);
         if(rcontrol1.checkEmail()){
             JOptionPane.showMessageDialog(this, "Now answer the security question to recover your account.");
@@ -283,6 +287,8 @@ public class forgetPasswordView extends javax.swing.JFrame {
 
     private void resetPwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetPwActionPerformed
         // TODO add your handling code here:
+        //Assert.assertEquals("Password Field is empty",false,nPW.getText().length()==0);
+        //Assert.assertEquals("Confirm Password Field is empty",false,cPW.getText().length()==0);
         if(nPW.getText().isEmpty()||cPW.getText().isEmpty()){
             JOptionPane.showMessageDialog(this, "Empty field is not allowed.");
             return;
