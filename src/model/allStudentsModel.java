@@ -6,9 +6,10 @@ package model;
 
 import javax.swing.table.DefaultTableModel;
 
-public class allRoomsModel {
+
+public class allStudentsModel {
     private DefaultTableModel tableName;
-    public allRoomsModel(DefaultTableModel tableName) {
+    public allStudentsModel(DefaultTableModel tableName) {
         this.tableName=tableName;
     }
 
@@ -19,6 +20,5 @@ public class allRoomsModel {
     public void setTableName(DefaultTableModel tableName) {
         this.tableName = tableName;
     }
-    
     
 }

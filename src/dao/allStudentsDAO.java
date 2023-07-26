@@ -8,23 +8,22 @@ import database.DbConnection;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.allRoomsModel;
+import model.allStudentsModel;
 
-
-public class allRoomsDAO {
-    private allRoomsModel model;
-    public allRoomsDAO(allRoomsModel model) {
+public class allStudentsDAO {
+    private allStudentsModel model;
+    public allStudentsDAO(allStudentsModel model) {
         this.model=model;
     }
-    public boolean displayRoom(){
-        
-        model.getTableName().setRowCount(0);
+    public boolean allStudents(){
+        DefaultTableModel a=model.getTableName();
+        a.setRowCount(0);
         try{
             Connection connect = DbConnection.connect();
             Statement statement= connect.createStatement();
-            ResultSet result= statement.executeQuery("select * from room");
+            ResultSet result= statement.executeQuery("select * from studentDetails");
             while(result.next()){
-                model.getTableName().addRow(new Object[]{result.getString(1),result.getString(2),result.getString(3)});
+                a.addRow(new Object[]{result.getString(1),result.getString(2),result.getString(3),result.getString(4),result.getString(5),result.getString(6),result.getString(7),result.getString(8),result.getString(9),result.getString(10)});
             }
             return true;
         }
@@ -32,5 +31,5 @@ public class allRoomsDAO {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
         return false;
-    }
+    }    
 }
