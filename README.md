@@ -1,11 +1,11 @@
-#Dormify - Hostel Management System
-##Introduction
+# Dormify - Hostel Management System
+## Introduction
 Welcome to Dormify, a Java Swing-based Hostel Management System designed to simplify and streamline hostel operations. Dormify aims to digitize and centralize the management of student details, making it convenient for hostel administrators to efficiently organize, update, and maintain accurate records. This README file provides an overview of Dormify and its key features.
 
-##Aim
+## Aim
 The aim of Dormify is to digitalize hostel operations, making it simple and convenient for hostels to efficiently manage and organize student details, ensuring accurate records and seamless information management.
 
-##Objectives
+## Objectives
 Dormify strives to achieve the following objectives:
 
 Establish a centralized database for efficient management of student details, ensuring easy access and retrieval of information.
