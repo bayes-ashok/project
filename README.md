@@ -16,24 +16,24 @@ Streamline and simplify the process of handling hostel fees for both students an
 Digitalize and optimize information management processes, leading to enhanced efficiency and productivity for hostel administrators.<br>
 
 ## Features
-	Signup
-	Login
-	Account Recovery
-	Add Room
-	Update Room
-	Delete Room
-	Search Room
-	View all rooms 
-	Student Registration
-	Search Student
-	Print student details
-	Update student records
-	Delete student records
-	See the names of all students
-	See the names of students currently living in hostel
-	See the names of students who left the hostel
-	Take attendance
-	View attendance
-	Record the fees
-	Print receipt
-	Update login credentials
+	Signup<br>
+	Login<br>
+	Account Recovery<br>
+	Add Room<br>
+	Update Room<br>
+	Delete Room<br>
+	Search Room<br>
+	View all rooms <br>
+	Student Registration<br>
+	Search Student<br>
+	Print student details<br>
+	Update student records<br>
+	Delete student records<br>
+	See the names of all students<br>
+	See the names of students currently living in hostel<br>
+	See the names of students who left the hostel<br>
+	Take attendance<br>
+	View attendance<br>
+	Record the fees<br>
+	Print receipt<br>
+	Update login credentials<br>
