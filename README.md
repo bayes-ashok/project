@@ -36,4 +36,4 @@ Digitalize and optimize information management processes, leading to enhanced ef
 	View attendance<br>
 	Record the fees<br>
 	Print receipt<br>
-	Update login credentials<br>
+	Update login credentials
